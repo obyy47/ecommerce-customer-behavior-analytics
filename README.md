@@ -6,6 +6,8 @@
 ## 📌 Project Overview
 This project performs an in-depth analysis of e-commerce customer shopping patterns, membership loyalty tier performance, satisfaction levels, and behavioral segmentation. 
 
+---
+
 The primary focus is to transform anomalous, raw datasets into an **Interactive Business Intelligence Dashboard** optimized for customer behavior segmentation, allowing for a deeper understanding of user demographics, engagement tiers, and distinct purchasing traits.
 
 ---
@@ -47,9 +49,11 @@ The dataset captures comprehensive profiles and financial metrics of e-commerce 
 | **Days_Since_Last_Purchase** | `INT64` | Converted to standard 64-bit integer type. |
 | **Satisfaction_Level** | `STRING` | Standardized sentiment text strings via `INITCAP(TRIM())`. |
 
+---
+
 > ⚠️ **Key Cleaning Highlight (SQL Data Integrity):**
 > During the initial Google Spreadsheet inspection, a specific anomaly was detected: **2 rows were entirely blank/missing** within the `Satisfaction_Level` column. To fix this, advanced data validation was applied using the `NULLIF(TRIM(...), '') IS NOT NULL` structure across all profile columns. This targeted action successfully eliminated those 2 corrupted rows and cleared any ghost formatting before materializing the final dataset (`ecommerce_behavior_final`), ensuring 100% data integrity for the Power BI dashboard.
-
+---
 ## 💻 Technical Code Snippets
 
 ### 🏢 SQL Data Transformation Pipeline (BigQuery)
@@ -109,7 +113,7 @@ Card Avg Spend = AVERAGE('E-commerce Customer Behavior_final'[Total_Spend])
 Card Avg Rating = AVERAGE('E-commerce Customer Behavior_final'[Average_Rating])
 ```
 </details>
-
+---
 ## 🐍 Python EDA — Key Visualizations
 
 To uncover patterns and validate business insights, exploratory data analysis was conducted using `Pandas`, `Matplotlib`, and `Seaborn`. Below are the four most impactful analyses:
@@ -222,6 +226,8 @@ Below is the interactive dashboard designed to showcase the customer segmentatio
 
 ![Dashboard Preview](images/visualization_ecommerce_behavior_segmentation.png)
 
+---
+
 ## 🎯 Strategic Recommendations
 
 - **Mitigate Retention Risk** — Deploy post-purchase surveys to isolate friction 
@@ -231,11 +237,15 @@ Below is the interactive dashboard designed to showcase the customer segmentatio
 - **Hyper-Localized Campaigns** — Double down on SF & NY; audit underperforming 
   inland cities (Houston, Chicago) for logistical or awareness gaps.
 
+---
+
 ## 📚 What I Learned
 
 - High ratings ≠ high satisfaction — reframed how I define customer success metrics
 - Importance of `NULLIF()` for catching ghost/empty rows that pass basic null checks
 - End-to-end workflow from raw data → SQL ETL → EDA → BI dashboard
+
+---
 
 ## Author
 Robby Adriansyah Fadillah
