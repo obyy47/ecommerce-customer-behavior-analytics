@@ -1,6 +1,5 @@
 # 🛒 E-Commerce Customer Behavior & Segmentation Analytics
-> **An End-to-End E-Commerce Customer Behavior & Segmentation Analytics Project:
-> Google Spreadsheet ➡️ SQL (BigQuery) ➡️ Python ➡️ Power BI**
+> **An End-to-End E-Commerce Customer Behavior & Segmentation Analytics Project: Google Spreadsheet ➡️ SQL (BigQuery) ➡️ Python ➡️ Power BI**
 
 ---
 
