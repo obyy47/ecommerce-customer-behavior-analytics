@@ -247,5 +247,5 @@ Below is the interactive dashboard designed to showcase the customer segmentatio
 
 ---
 
-## Author
+## 👤 Author
 Robby Adriansyah Fadillah
